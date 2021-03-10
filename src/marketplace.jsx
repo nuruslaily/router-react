@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './marketplace.css'
-import hijab from './assets/hijab.jpg'
-import baju from './assets/baju.jpg'
-import favicon from './assets/favicon.png'
+import macbook from './assets/macbook.jpg'
+import iphone from './assets/iphone.jpg'
+import apple from './assets/apple.png'
 import {
     BrowserRouter as Router,
     Switch,
@@ -20,7 +20,7 @@ function marketplace() {
     return (
         <Router>
             <div className="header">
-                <img src={favicon} alt="" />
+                <img src={apple} alt="" />
                 <AuthButton />
 
                 <ul>
@@ -28,7 +28,7 @@ function marketplace() {
                         <Link className="Link-1" to="/home">Home</Link>
                     </li>
                     <li className="TopBar-1">
-                        <Link className="Link-1" to="/sale">Sale</Link>
+                        <Link className="Link-1" to="/data">Data</Link>
                     </li>
                 </ul>
 
@@ -36,7 +36,7 @@ function marketplace() {
                 <Switch>
                     <Route exact path="/home" component={Home} />
                     <Route path="/login" component={Login} />
-                    <PrivateRoute path="/sale" component={Sale} />
+                    <PrivateRoute path="/data" component={Data} />
                 </Switch>
             </div>
         </Router>
@@ -95,49 +95,49 @@ function PrivateRoute({ component: Component, ...rest }) {
 function Home() {
     return (
         <div className="Home">
-            <h2 align="center">Katalog Barang</h2>
+            <h2>Katalog Barang</h2>
             <div className="grid">
                 <div className="row">
                     <div className="col-sm">
-                        <img src={hijab} alt="Gambar Thumbnail Artikel" />
-                        <h3 align="center">Hijab</h3>
+                        <img src={macbook} alt="Gambar Thumbnail Artikel" />
+                        <h3>Macbook Pro</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                     </div>
                     <div className="col-sm">
-                        <img src={hijab} alt="Gambar Thumbnail Artikel" />
-                        <h3 align="center">Hijab</h3>
+                        <img src={macbook} alt="Gambar Thumbnail Artikel" />
+                        <h3>Macbook Pro</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                     </div>
                     <div className="col-sm">
-                        <img src={hijab} alt="Gambar Thumbnail Artikel" />
-                        <h3 align="center">Hijab</h3>
+                        <img src={macbook} alt="Gambar Thumbnail Artikel" />
+                        <h3>Macbook Pro</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                     </div>
                     <div className="col-sm">
-                        <img src={hijab} alt="Gambar Thumbnail Artikel" />
-                        <h3 align="center">Hijab</h3>
+                        <img src={macbook} alt="Gambar Thumbnail Artikel" />
+                        <h3>Macbook Pro</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-sm">
-                        <img src={baju} alt="Gambar Thumbnail Artikel" />
-                        <h3 align="center">Pakaian</h3>
+                        <img src={iphone} alt="Gambar Thumbnail Artikel" />
+                        <h3>Iphone 12</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                     </div>
                     <div className="col-sm">
-                        <img src={baju} alt="Gambar Thumbnail Artikel" />
-                        <h3 align="center">Pakaian</h3>
+                        <img src={iphone} alt="Gambar Thumbnail Artikel" />
+                        <h3>Iphone 12</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                     </div>
                     <div className="col-sm">
-                        <img src={baju} alt="Gambar Thumbnail Artikel" />
-                        <h3 align="center">Pakaian</h3>
+                        <img src={iphone} alt="Gambar Thumbnail Artikel" />
+                        <h3>Iphone 12</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                     </div>
                     <div className="col-sm">
-                        <img src={baju} alt="Gambar Thumbnail Artikel" />
-                        <h3 align="center">Pakaian</h3>
+                        <img src={iphone} alt="Gambar Thumbnail Artikel" />
+                        <h3>Iphone 12</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                     </div>
                 </div>
@@ -146,7 +146,7 @@ function Home() {
     )
 }
 
-function Sale() {
+function Data() {
 
     let { path, url } = useRouteMatch();
 
@@ -155,10 +155,10 @@ function Sale() {
             {/* <h2>Data Barang</h2> */}
             <ul>
                 <li className="TopBar-2">
-                    <Link to={`${url}/DataHijab`}>Data Hijab</Link>
+                    <Link to={`${url}/DataMacbook`}>Data Macbook</Link>
                 </li>
                 <li className="TopBar-2">
-                    <Link to={`${url}/DataPakaian`}>Data Pakaian</Link>
+                    <Link to={`${url}/DataIphone`}>Data Iphone</Link>
                 </li>
             </ul>
 
@@ -177,99 +177,99 @@ function Sale() {
 function DataBody() {
     let { dataId } = useParams();
 
-    if (dataId === "DataHijab") {
+    if (dataId === "DataMacbook") {
         return (
-            <div className="Data-Hijab">
+            <div className="Data-Macbook">
                 <h1>{dataId}</h1>
-                <div className="table-hijab">
+                <div className="table-mac">
                     <table border="1">
                         <tr>
                             <th>Nama Barang</th>
                             <th>Gambar</th>
-                            <th>Model</th>
-                            <th>Stok</th>
+                            <th>Tipe</th>
+                            <th>Tahun</th>
                             <th>Harga</th>
                         </tr>
                         <tr>
-                            <td>Hijab</td>
-                            <td><img src={hijab} alt="hijab"/></td>
-                            <td>Pashmina</td>
-                            <td>200</td>
-                            <td>150.000</td>
+                            <td>Macbook</td>
+                            <td><img src={macbook} alt="macbook"/></td>
+                            <td>Pro</td>
+                            <td>2020</td>
+                            <td>18.999.000</td>
                         </tr>
                         <tr>
-                            <td>Hijab</td>
-                            <td><img src={hijab} alt="hijab"/></td>
-                            <td>Pashmina</td>
-                            <td>200</td>
-                            <td>150.000</td>
+                            <td>Macbook</td>
+                            <td><img src={macbook} alt="macbook"/></td>
+                            <td>Pro</td>
+                            <td>2020</td>
+                            <td>18.999.000</td>
                         </tr>
                         <tr>
-                            <td>Hijab</td>
-                            <td><img src={hijab} alt="hijab"/></td>
-                            <td>Pashmina</td>
-                            <td>200</td>
-                            <td>150.000</td>
+                            <td>Macbook</td>
+                            <td><img src={macbook} alt="macbook"/></td>
+                            <td>Pro</td>
+                            <td>2020</td>
+                            <td>18.999.000</td>
                         </tr>
                         <tr>
-                            <td>Hijab</td>
-                            <td><img src={hijab} alt="hijab"/></td>
-                            <td>Pashmina</td>
-                            <td>200</td>
-                            <td>150.000</td>
+                            <td>Macbook</td>
+                            <td><img src={macbook} alt="macbook"/></td>
+                            <td>Pro</td>
+                            <td>2020</td>
+                            <td>18.999.000</td>
                         </tr>
                         <tr>
-                            <td>Hijab</td>
-                            <td><img src={hijab} alt="hijab"/></td>
-                            <td>Pashmina</td>
-                            <td>200</td>
-                            <td>150.000</td>
+                            <td>Macbook</td>
+                            <td><img src={macbook} alt="macbook"/></td>
+                            <td>Pro</td>
+                            <td>2020</td>
+                            <td>18.999.000</td>
                         </tr>
                     </table>
                 </div>
             </div >
         )
-    } else if (dataId === "DataPakaian") {
+    } else if (dataId === "DataIphone") {
         return (
-            <div className="Data-Pakaian">
+            <div className="Data-Iphone">
                 <h1>{dataId}</h1>
-                <div className="table-hijab">
+                <div className="table-mac">
                     <table border="1">
                         <tr>
                             <th>Nama Barang</th>
-                            <th>Gambar</th>
-                            <th>Stok</th>
+                            <th>Tipe</th>
+                            <th>Tahun</th>
                             <th>Harga</th>
                         </tr>
                         <tr>
-                            <td>Pakaian</td>
-                            <td><img src={baju} alt="pakaian"/></td>
-                            <td>200</td>
-                            <td>500.000</td>
+                            <td>Iphone</td>
+                            <td>12</td>
+                            <td>2020</td>
+                            <td>21.999.000</td>
                         </tr>
                         <tr>
-                            <td>Pakaian</td>
-                            <td><img src={baju} alt="pakaian"/></td>
-                            <td>200</td>
-                            <td>500.000</td>
+                            <td>Iphone</td>
+                            <td>12</td>
+                            <td>2020</td>
+                            <td>21.999.000</td>
                         </tr>
                         <tr>
-                            <td>Pakaian</td>
-                            <td><img src={baju} alt="pakaian"/></td>
-                            <td>200</td>
-                            <td>500.000</td>
+                            <td>Iphone</td>
+                            <td>12</td>
+                            <td>2020</td>
+                            <td>21.999.000</td>
                         </tr>
                         <tr>
-                            <td>Pakaian</td>
-                            <td><img src={baju} alt="pakaian"/></td>
-                            <td>200</td>
-                            <td>500.000</td>
+                            <td>Iphone</td>
+                            <td>12</td>
+                            <td>2020</td>
+                            <td>21.999.000</td>
                         </tr>
                         <tr>
-                            <td>Pakaian</td>
-                            <td><img src={baju} alt="pakaian"/></td>
-                            <td>200</td>
-                            <td>500.000</td>
+                            <td>Iphone</td>
+                            <td>12</td>
+                            <td>2020</td>
+                            <td>21.999.000</td>
                         </tr>
                     </table>
                 </div>
@@ -298,7 +298,6 @@ class Login extends Component {
         return (
             <div className="Login">
                 <p>You must log in to view the page</p>
-                <br />
                 <button onClick={this.login}>Login</button>
             </div>
         );
